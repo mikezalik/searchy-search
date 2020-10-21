@@ -3,4 +3,5 @@
 <%= render 'form', search_item: @search_item %>
 
 <%= link_to 'Show', @search_item %> |
-<%= link_to 'Back', search_items_path %>
+<%= link_to 'Back', search_items_path %> |
+<%= link_to 'Delete', @search_item, method: :delete, data: { confirm: 'Are you sure?' } %>
