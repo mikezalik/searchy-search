@@ -9,4 +9,17 @@ class CreateSearchItems < ActiveRecord::Migration[6.0]
       t.timestamps
     end
   end
+
+  def self.search(search)
+    if search
+      searchitem = SearchItem.search(keywords: search)
+      if searchitem
+        self.search(title: searchitem)
+      else
+        SearchItem.all
+      end
+    else
+      SearchItem.all
+    end
+  end
 end

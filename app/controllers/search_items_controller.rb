@@ -5,6 +5,8 @@ class SearchItemsController < ApplicationController
   # GET /search_items.json
   def index
     @search_items = SearchItem.all
+
+    @search_items = SearchItem.where(["keyword LIKE ?", "%#{params[:search]}"])
   end
 
   # GET /search_items/1
