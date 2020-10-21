@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Search Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Link</th>
+      <th>Keywords</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @search_items.each do |search_item| %>
+      <tr>
+        <td><%= search_item.title %></td>
+        <td><%= search_item.text %></td>
+        <td><%= search_item.link %></td>
+        <td><%= search_item.keywords %></td>
+        <td><%= link_to 'Show', search_item %></td>
+        <td><%= link_to 'Edit', edit_search_item_path(search_item) %></td>
+        <td><%= link_to 'Destroy', search_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Search Item', new_search_item_path %>
