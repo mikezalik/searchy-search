@@ -6,7 +6,7 @@ class SearchItemsController < ApplicationController
   def index
     @search_items = SearchItem.all
 
-    @search_items = SearchItem.where(["keyword LIKE ?", "%#{params[:search]}"])
+    @search_items = SearchItem.where(["keywords LIKE ?", "%#{params[:search]}"])
   end
 
   # GET /search_items/1
