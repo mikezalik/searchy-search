@@ -1,27 +1,39 @@
+<nav class="nav-bar">
+  <h3>Le Searchy Search</h3>
+</nav>
 <p id="notice"><%= notice %></p>
-
-<h1>Searchy Search</h1>
 
 <table>
   <thead>
+  <%= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Oxygen"%>
     <tr>
     </tr>
   </thead>
 
   <tbody>
-    <h4>Search here by keyword:</h4>
-    <%= form_tag(search_items_path, method: :get) do %>
-    <%= text_field_tag(:search, params[:search]) %>
-    <%= submit_tag ("Search")%>
-    <% end %>
-
+    <main>
+      <section id="search">
+       <div id="search-container">
+        <div id="header">
+          <h1>Le Searchy Search</h1>
+        </div>
+        <h4>Search here by keyword:</h4>
+        <%= form_tag(search_items_path, method: :get) do %>  
+          <div id="search-field">
+            <%= text_field_tag(:search, params[:search]) %> <br>
+            <%= submit_tag ("Search") %>
+          </div>
+        <% end %>
+        </div>
+      </section>
     <% @search_items.each do |search_item| %>
       <tr>
-      <ul>
+      <ul id="results">
       <li><%= link_to search_item.title, search_item_path(search_item) %></li><br>
       </ul>
       </tr>
     <% end %>
+    </main>
   </tbody>
 </table>
 
