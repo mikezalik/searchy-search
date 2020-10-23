@@ -11,6 +11,7 @@
   </thead>
 
   <tbody>
+<<<<<<< HEAD
     <main>
       <section id="search">
        <div id="search-container">
@@ -31,10 +32,21 @@
       <ul id="results">
       <li><%= link_to search_item.title, search_item_path(search_item) %></li><br>
       </ul>
+=======
+    <h4>Search by keyword:</h4>
+    <%= form_tag(search_items_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag ("Search")%>
+    <% end %>
+
+    <% @search_items.each do |search_item| %>
+      <tr>
+        <ul>
+          <li><%= link_to search_item.title, search_item_path(search_item) %></li><br>
+        </ul>
+>>>>>>> dcf4635395906068dbf00bf97e1ad913ff595ed1
       </tr>
     <% end %>
     </main>
   </tbody>
 </table>
-
-<br>
