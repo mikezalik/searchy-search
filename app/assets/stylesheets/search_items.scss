@@ -6,17 +6,22 @@ $font-header: "Crimson Text", serif;
 $font-body: "Oxygen", sans-serif;
 
 /* COLORS */
+/* ANALOGOUS COLOR SCHEME */
 $background-main: #769cc3;
-$background-main-gradient: #d4e4ef;
-$background-secondary: #a15a64;
-$background-tertiary: #603641;
+$background-secondary: #595a9a;
+$background-tertiary: #599a9a;
+$background-gradient: #d4e4ef;
 $backdrop: #597a9a;
+
+$navbar-gradient: #598a9a;
 
 $font-color: #152b4f;
 
 $background-results: #ededef;
 
 $background-list1: $backdrop, $background-main;
+
+$navbar-list1: $background-tertiary, $navbar-gradient;
 
 @mixin gradient($direction, $list) {
   background: -webkit-linear-gradient($direction, $list);
@@ -76,7 +81,7 @@ ul {
 }
 
 .nav-bar {
-  background-color: $background-tertiary;
+  @include gradient(right, $navbar-list1);
   font-family: $font-body;
   font-size: 0.8rem;
   text-align: center;
