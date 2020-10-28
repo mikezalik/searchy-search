@@ -98,6 +98,7 @@ ul {
   position: -webkit-sticky;
   position: sticky;
   z-index: 100;
+  border-bottom: 3px, solid $font-color;
 }
 
 #search-container {
@@ -117,4 +118,16 @@ ul {
   border-radius: 50px;
   padding: 1em;
   margin: 0em 10em 2em 10em;
+}
+
+#navbar-b {
+  overflow: hidden;
+  background-color: #4f5974;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 1em;
+  text-align: left;
+  font-size: 0.5em;
+  border-top: 1px solid #599a9a;
 }
