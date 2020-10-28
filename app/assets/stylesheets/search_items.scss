@@ -2,106 +2,114 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
 $font-header: "Crimson Text", serif;
 $font-body: "Oxygen", sans-serif;
 
 /* COLORS */
 $background-main: #769cc3;
 $background-main-gradient: #d4e4ef;
-$background-secondary: #A15A64;
+$background-secondary: #a15a64;
 $background-tertiary: #603641;
-$backdrop: #597A9A;
+$backdrop: #597a9a;
 
 $font-color: #152b4f;
 
-$background-results: #EDEDEF;
+$background-results: #ededef;
+
+$background-list1: $backdrop, $background-main;
+
+@mixin gradient($direction, $list) {
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: linear-gradient($direction, $list);
+}
 
 * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-color: $backdrop;
-  }
-  
-  body {
-    font-family: $font-body;
-    flex-direction: column;
-    display: block;
-    justify-content: center;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.75em;
-    margin: 0em;
-    max-width: 100%;
-    min-width: 100%;
-  }
-  
-  h1 {
-    font-family: $font-header;
-    color: $font-color;
-    justify-content: center;
-    min-height: 0em;
-    min-width: 3.25em;
-  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  h3 {
-      padding-left: 2em;
-  }
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: $backdrop;
+  @include gradient(left, $background-list1);
+}
 
-  h4 {
-      font-family: $font-header;
-  }
+body {
+  font-family: $font-body;
+  flex-direction: column;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.75em;
+  margin: 0em;
+  max-width: 100%;
+  min-width: 100%;
+}
 
-  ul {
-    font-family: $font-body;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    padding-top: 1em;
-  }
+h1 {
+  font-family: $font-header;
+  color: $font-color;
+  justify-content: center;
+  min-height: 0em;
+  min-width: 3.25em;
+}
 
-  .nav-bar {
-    background-color: $background-tertiary;
-    font-family: $font-body;
-    font-size: 0.8rem;
-    text-align: center;
-    text-transform: uppercase;
-    min-height: 3em;
-    min-width: 75%;
-    max-width: 100%;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-pack: center;
-    justify-content: left;
-    position: -webkit-sticky;
-    position: sticky;
-    z-index: 100;
-  }
+h3 {
+  padding-left: 2em;
+}
 
-  #search-container {
-    background: $background-main;
-    border-radius: 25px 200px;
-    padding: 1em;
-    margin: 2em 10em 0em 10em;
-  }
+h4 {
+  font-family: $font-header;
+}
 
-  #header {
-      font-size: 2em;
-      margin: 0em;
-  }
+ul {
+  font-family: $font-body;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 1em;
+}
 
-  #results {
-    background-color: $background-results;
-    border-radius: 50px;
-    padding: 1em;
-    margin: 0em 10em 2em 10em;
-  }
-  
+.nav-bar {
+  background-color: $background-tertiary;
+  font-family: $font-body;
+  font-size: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  min-height: 3em;
+  min-width: 75%;
+  max-width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: left;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+}
+
+#search-container {
+  background: $background-main;
+  border-radius: 25px 200px;
+  padding: 1em;
+  margin: 2em 10em 0em 10em;
+}
+
+#header {
+  font-size: 2em;
+  margin: 0em;
+}
+
+#results {
+  background-color: $background-results;
+  border-radius: 50px;
+  padding: 1em;
+  margin: 0em 10em 2em 10em;
+}
