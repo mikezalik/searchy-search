@@ -8,10 +8,12 @@ $font-body: "Oxygen", sans-serif;
 /* COLORS */
 /* ANALOGOUS COLOR SCHEME */
 $background-main: #769cc3;
+$background-main-gradient: #b5c6d6;
 $background-secondary: #595a9a;
 $background-tertiary: #599a9a;
 $background-gradient: #d4e4ef;
-$backdrop: #597a9a;
+$backdrop-dark: #597a9a;
+$backdrop: #d6dfe8;
 
 $navbar-gradient: #598a9a;
 
@@ -19,7 +21,7 @@ $font-color: #152b4f;
 
 $background-results: #ededef;
 
-$background-list1: $backdrop, $background-main;
+$background-list1: $backdrop-dark, $background-main-gradient;
 
 $navbar-list1: $background-tertiary, $navbar-gradient;
 
@@ -98,6 +100,7 @@ ul {
   position: sticky;
   z-index: 100;
   border-bottom: 3px solid $font-color;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 #search-container {
@@ -114,9 +117,10 @@ ul {
 
 #results {
   background-color: $background-results;
-  border-radius: 50px;
+  border-radius: 10px;
   padding: 1em;
   margin: 0em 10em 2em 10em;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 #navbar-b {
