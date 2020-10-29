@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<main id="show-card">
 <p>
   <strong>Title:</strong>
   <%= @search_item.title %>
@@ -22,3 +23,5 @@
 
 <%= link_to 'Edit', edit_search_item_path(@search_item) %> |
 <%= link_to 'Back', root_path, data: {turbolinks: false} %>
+
+</main>
