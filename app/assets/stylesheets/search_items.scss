@@ -83,7 +83,7 @@ ul {
 }
 
 .nav-bar {
-  @include gradient(right, $navbar-list1);
+  background-color: #4f5974;
   font-family: $font-body;
   font-size: 0.8rem;
   text-align: center;
