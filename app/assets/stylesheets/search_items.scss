@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-$font-header: "Crimson Text", serif;
-$font-body: "Oxygen", sans-serif;
+$font-header: 'Crimson Text', serif;
+$font-body: 'Oxygen', sans-serif;
 
 /* COLORS */
 /* ANALOGOUS COLOR SCHEME */
@@ -142,4 +142,24 @@ ul {
   text-align: left;
   font-size: 0.5em;
   border-top: 1px solid #599a9a;
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  text-decoration: none;
 }
