@@ -1,6 +1,6 @@
-# Searchy Search
+# Searchy-Search
 
-[SEARCHY-SEARCH](https://searchysearch.herokuapp.com/) is a Ruby on Rails web application designed to help organize information and make it accessible for sales people on demand. Users can sign up and search pdf's, sales language and email templates as needed.
+[SEARCHY-SEARCH](https://searchysearch.herokuapp.com/) is a Ruby on Rails web app designed to help organize information and make it accessible for sales people on demand. Users can sign up, search pdf's, sales language and email templates as needed.
 
 ## Usage 👩‍💻
 
@@ -34,7 +34,7 @@ heroku open
 
 ## Project Summary
 
-SEARCHY-SEARCH is designed to help keep important information close and retrievable. The primary focus is to keep this information indexable and easy to search for access while on sales calls or while typing up follow up emails for prospective clients. The secondary focus is to help maintain consistency within sales departments to help each sales executive find relevant and effective sales language.
+Searchy-search is a monolith designed to help keep important sales information close and retrievable. The primary focus is to keep this information indexable and easy to search for access while on sales calls or while typing up follow up emails for prospective clients. The secondary focus is to help maintain consistency within sales departments to help each sales executive find relevant and effective sales language.
 
 ## Screenshots 📸
 
@@ -48,9 +48,7 @@ In the design phase of this application, I started thinking about user stories t
 
 ## Development Process 🛠
 
-In the development phase of this application, I began with an MVC build out in Rails. Though I prefer to work html first as it promotes progressive enhancement, I was concerned with the backend logic initially and the conventions in Rails allow for this approach to be used. With a base, built in HTML, it was easy to choose which aspects would benefit from enhancement and which tools would be best suited for their creation. In order to maintain the goals set in my design process (with accessibility in mind), I used ERB templates. Because I wouldn't need to reason with a lot of state I thought this would be sufficient to help maintain simplicity and a straightforward implementation.
-
-On the back-end, I built a RESTful architecture with the end user retaining access to GET operations. To solve the issue of authentication, Devise was implemented, complete with its own models and views.
+In the development phase of this application, I began with an MVC and RESTful build out in Rails. Though I prefer to work html first as it promotes progressive enhancement, I was concerned with the backend logic initially and the conventions in Rails allow for this approach to be used. With this base and a functional MVP, it was easy to choose which features would benefit from enhancement and which tools would be best suited for their creation. In order to maintain the goals set in my design process (with accessibility in mind), I used Embedded Ruby templates. Because I wouldn't need to reason with a lot of state within the app I thought this would be sufficient to help maintain simplicity and a straightforward implementation.
 
 Styling is written in Sass and transpiled to CSS3.
 

@@ -1,30 +1,34 @@
+#Controller that provides RESTful operations on search items. Users have access to GET operations, except GET new, at the moment. 
 class SearchItemsController < ApplicationController
   before_action :set_search_item, only: [:show, :edit, :update, :destroy]
 
-  # GET /search_items
-  # GET /search_items.json
+  #User accessible
+  #Searchable via keywords provided in search item model
+  #GET /search_items
+  #GET /search_items.json
   def index
     @search_items = SearchItem.all
 
     @search_items = SearchItem.where(["keywords LIKE ?", "%#{params[:search]}%"])
   end
 
-  # GET /search_items/1
-  # GET /search_items/1.json
+  #User accessible
+  #GET /search_items/1
+  #GET /search_items/1.json
   def show
   end
 
-  # GET /search_items/new
+  #GET /search_items/new
   def new
     @search_item = SearchItem.new
   end
 
-  # GET /search_items/1/edit
+  #GET /search_items/1/edit
   def edit
   end
 
-  # POST /search_items
-  # POST /search_items.json
+  #POST /search_items
+  #POST /search_items.json
   def create
     @search_item = SearchItem.new(search_item_params)
 
@@ -39,8 +43,8 @@ class SearchItemsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /search_items/1
-  # PATCH/PUT /search_items/1.json
+  #PATCH/PUT /search_items/1
+  #PATCH/PUT /search_items/1.json
   def update
     respond_to do |format|
       if @search_item.update(search_item_params)
@@ -53,8 +57,8 @@ class SearchItemsController < ApplicationController
     end
   end
 
-  # DELETE /search_items/1
-  # DELETE /search_items/1.json
+  #DELETE /search_items/1
+  #DELETE /search_items/1.json
   def destroy
     @search_item.destroy
     respond_to do |format|
@@ -64,12 +68,12 @@ class SearchItemsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    #Use callbacks to share common setup or constraints between actions.
     def set_search_item
       @search_item = SearchItem.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+    #Only allow list of trusted parameters through.
     def search_item_params
       params.require(:search_item).permit(:title, :text, :link, :keywords)
     end
