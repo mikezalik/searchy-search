@@ -69,5 +69,6 @@ Styling is written in Sass and transpiled to CSS3.
 
 ### Testing and Deployment
 
+- [RuboCop](https://rubocop.org/) - linter
 - [Heroku](https://www.heroku.com/) - cloud PaaS
 - [ESLint](http://eslint.org/) - linting utility
